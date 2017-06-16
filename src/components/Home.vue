@@ -44,7 +44,7 @@
           {title:'下属玩家',url:'/player'},
           {title:'充值记录',url:'/record'},
           {title:'授权代理',url:'/authorize'},
-          {title:'退出登录',url:'/logout'},
+          {title:'退出登录',url:'/'},
         ]
       }
     }
@@ -55,7 +55,6 @@
   .home {
     text-align: center;
   }
-
   .home .icon {
     margin: 10px auto;
     width: 100px;

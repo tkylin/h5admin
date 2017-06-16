@@ -7,14 +7,24 @@ import App from "./App";
 import Login from "./components/Login";
 import Home from "./components/Home";
 import Hello from "./components/Hello";
-
-Vue.use(VueRouter)
+import Password from "./components/Password";
+import Agency from "./components/Agency";
+import Authorize from "./components/Authorize";
+import Player from "./components/Player";
+import Record from "./components/Record";
 
 const routes = [
   {path: '/', component: Login},
   {path: '/home', component: Home},
-  {path: '/hello', component: Hello}
+  {path: '/hello', component: Hello},
+  {path: '/password', component: Password},
+  {path: '/agency', component: Agency},
+  {path: '/authorize', component: Authorize},
+  {path: '/player', component: Player},
+  {path: '/record', component: Record}
 ]
+
+Vue.use(VueRouter)
 
 const router = new VueRouter({
   routes
