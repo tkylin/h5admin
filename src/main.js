@@ -3,6 +3,7 @@
 import Vue from "vue";
 import FastClick from "fastclick";
 import VueRouter from "vue-router";
+import Vuex from "vuex";
 import App from "./App";
 import Login from "./components/Login";
 import Home from "./components/Home";
@@ -25,6 +26,20 @@ const routes = [
 ]
 
 Vue.use(VueRouter)
+Vue.use(Vuex)
+
+const store = new Vuex.Store({
+  state: {
+    title: '',
+    path: ''
+  },
+  mutations: {
+    headerChange (state, payload) {
+      state.title = payload.title;
+      state.path = payload.path;
+    }
+  }
+})
 
 const router = new VueRouter({
   routes
@@ -37,5 +52,6 @@ Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
   router,
+  store,
   render: h => h(App)
 }).$mount('#app-box')
