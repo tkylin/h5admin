@@ -12,7 +12,12 @@ import Password from "./components/Password";
 import Agency from "./components/Agency";
 import Authorize from "./components/Authorize";
 import Player from "./components/Player";
-import Record from "./components/Record";
+import MoneyRecord from "./components/MoneyRecord";
+import PlayerMoneyList from "./components/PlayerMoneyList";
+import AgencyMoneyList from "./components/AgencyMoneyList";
+import AgencyPlayerMoneyList from "./components/AgencyPlayerMoneyList";
+import CardChangeRecord from "./components/CardChangeRecord";
+
 
 const routes = [
   {path: '/', component: Login},
@@ -22,7 +27,11 @@ const routes = [
   {path: '/agency', component: Agency},
   {path: '/authorize', component: Authorize},
   {path: '/player', component: Player},
-  {path: '/record', component: Record}
+  {path: '/money_record', component: MoneyRecord},
+  {path: '/player_money_list', component: PlayerMoneyList},
+  {path: '/agency_money_list', component: AgencyMoneyList},
+  {path: '/agency_player_money_list', component: AgencyPlayerMoneyList},
+  {path: '/card_change_record', component: CardChangeRecord}
 ]
 
 Vue.use(VueRouter)

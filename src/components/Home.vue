@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <x-header :left-options="{showBack: false}">移动端管理后台</x-header>
+    <x-header :left-options="{showBack: false}">友趣棋牌代理后台</x-header>
     <x-img class="icon" :src="user.icon"></x-img>
     <flexbox>
       <flexbox-item>
@@ -15,6 +15,11 @@
     <flexbox>
       <flexbox-item>
         <div class="flex-demo">加入时间：{{user.joinDate}}</div>
+      </flexbox-item>
+    </flexbox>
+    <flexbox>
+      <flexbox-item>
+        <div class="flex-demo">房卡数：{{user.cardNum}} <x-button mini link="/card_change_record">明细</x-button></div>
       </flexbox-item>
     </flexbox>
     <grid class="grid">
@@ -36,13 +41,14 @@
           nickName: '清风',
           id: 12345,
           code: 12345,
-          joinDate: '2017-06-16 00:18'
+          joinDate: '2017-06-16 00:18',
+          cardNum:200
         },
         gridMenu:[
           {title:'修改密码',url:'/password'},
           {title:'下属代理',url:'/agency'},
           {title:'下属玩家',url:'/player'},
-          {title:'充值记录',url:'/record'},
+          {title:'充值记录',url:'/money_record'},
           {title:'授权代理',url:'/authorize'},
           {title:'退出登录',url:'/'},
         ]

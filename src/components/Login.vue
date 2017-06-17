@@ -1,6 +1,6 @@
 <template>
   <div class="login">
-    <x-header :left-options="{showBack: false}">移动端管理后台</x-header>
+    <x-header :left-options="{showBack: false}">友趣棋牌代理后台</x-header>
     <group>
       <x-input title="账号" type="number" required v-model="account"></x-input>
       <x-input title="密码" type="password" required v-model="password"></x-input>
