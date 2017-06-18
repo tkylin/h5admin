@@ -3,14 +3,14 @@
     <sticky>
       <x-header>下属代理</x-header>
     </sticky>
-    <search :auto-fixed="false" placeholder="请输入玩家ID" v-model="search"></search>
+    <search :auto-fixed="false" placeholder="请输入代理邀请码" v-model="search"></search>
     <x-table>
       <thead>
       <tr>
-        <td>ID</td>
+        <td>邀请码</td>
         <td>昵称</td>
         <td>等级</td>
-        <td>头像</td>
+        <td>分成点</td>
         <td>操作</td>
       </tr>
       </thead>
@@ -19,7 +19,7 @@
         <td>{{user.id}}</td>
         <td>{{user.nickName}}</td>
         <td>{{user.levelName}}</td>
-        <td><img :src="user.icon" style="width:60px;"/></td>
+        <td>{{user.prorata}}<x-button type="primary" mini>编辑</x-button></td>
         <td width="73">
           <x-button type="primary" mini>充值</x-button>
           <x-button type="primary" mini v-if="user.hasAgency" link="/agency">下属</x-button>
@@ -66,7 +66,8 @@
             level: 3,
             levelName: '客服',
             hasAgency: true,
-            hasPlayer: true
+            hasPlayer: true,
+            prorata:12
           },
           {
             id: 12346,
@@ -75,7 +76,8 @@
             level: 3,
             levelName: '客服',
             hasAgency: true,
-            hasPlayer: true
+            hasPlayer: true,
+            prorata:12
           },
           {
             id: 12347,
@@ -84,7 +86,8 @@
             level: 3,
             levelName: '客服',
             hasAgency: true,
-            hasPlayer: false
+            hasPlayer: false,
+            prorata:12
           },
           {
             id: 12348,
@@ -93,7 +96,8 @@
             level: 3,
             levelName: '客服',
             hasAgency: false,
-            hasPlayer: true
+            hasPlayer: true,
+            prorata:12
           },
           {
             id: 12348,
@@ -102,7 +106,8 @@
             level: 3,
             levelName: '客服',
             hasAgency: false,
-            hasPlayer: true
+            hasPlayer: true,
+            prorata:12
           },
           {
             id: 12348,
@@ -111,7 +116,8 @@
             level: 3,
             levelName: '客服',
             hasAgency: false,
-            hasPlayer: true
+            hasPlayer: true,
+            prorata:12
           },
           {
             id: 12348,
@@ -120,7 +126,8 @@
             level: 3,
             levelName: '客服',
             hasAgency: false,
-            hasPlayer: true
+            hasPlayer: true,
+            prorata:12
           },
           {
             id: 12348,
@@ -129,7 +136,8 @@
             level: 3,
             levelName: '客服',
             hasAgency: false,
-            hasPlayer: true
+            hasPlayer: true,
+            prorata:12
           },
           {
             id: 12348,
@@ -138,7 +146,8 @@
             level: 3,
             levelName: '客服',
             hasAgency: false,
-            hasPlayer: true
+            hasPlayer: true,
+            prorata:12
           },
           {
             id: 12348,
@@ -147,7 +156,8 @@
             level: 3,
             levelName: '客服',
             hasAgency: false,
-            hasPlayer: true
+            hasPlayer: true,
+            prorata:12
           }
         ]
       }

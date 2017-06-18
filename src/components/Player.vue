@@ -20,6 +20,7 @@
         <td><img :src="user.icon" style="width:60px;"/></td>
         <td width="73">
           <x-button type="primary" mini>充值</x-button>
+          <x-button type="primary" mini>授权</x-button>
         </td>
       </tr>
       </tbody>
